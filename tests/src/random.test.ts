@@ -1,7 +1,7 @@
 import "mocha";
-import { assert }from "chai";
+import { assert } from "chai";
 
-import { Random }from "extenderjs";
+import { Random } from "extenderjs";
 
 describe("random", () => {
     const min = 1;
@@ -88,7 +88,7 @@ describe("random", () => {
     });
     describe("choice", () => {
         it("empty array should get undefined", () => {
-            assert.isUndefined(Random.choice([]));
+            assert.isUndefined(Random.choice<number>([]));
         });
 
         const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
