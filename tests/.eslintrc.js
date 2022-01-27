@@ -322,6 +322,10 @@ module.exports = {
                     "as": {
                         "before": true,
                         "after": true
+                    },
+                    "from": {
+                        "before": true,
+                        "after": true
                     }
                 }
             }
