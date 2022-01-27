@@ -1,3 +1,6 @@
-export function helloWorld(): string{
-    return "hello World!";
-}
+import { Random }from "./random";
+
+
+export {
+    Random
+};
