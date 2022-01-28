@@ -1,3 +1,4 @@
+/* eslint-disable */
 module.exports = {
     "root": true,
     "parser": "@typescript-eslint/parser",
@@ -12,6 +13,7 @@ module.exports = {
             "./tsconfig.json"
         ],
         "tsconfigRootDir": __dirname,
+        "createDefaultProgram": true
     },
     "plugins": [
         "@typescript-eslint"
@@ -60,7 +62,7 @@ module.exports = {
         "@typescript-eslint/member-delimiter-style": ["error", {
             "multiline": {
                 "delimiter": "semi",
-                "requireLast": false
+                "requireLast": true
             },
             "singleline": {
                 "delimiter": "comma",
@@ -158,7 +160,7 @@ module.exports = {
                 ]
             }
         ],
-        "@typescript-eslint/method-signature-style": "error",
+        "@typescript-eslint/method-signature-style": ["error", "method"],
         "@typescript-eslint/naming-convention": [
             "error",
             {
@@ -321,6 +323,10 @@ module.exports = {
                     "as": {
                         "before": true,
                         "after": true
+                    },
+                    "from": {
+                        "before": true,
+                        "after": true
                     }
                 }
             }
@@ -384,10 +390,6 @@ module.exports = {
         ],
         "space-infix-ops": "off",
         "@typescript-eslint/space-infix-ops": ["error", { "int32Hint": false }],
-
-
-
-
 
         "@typescript-eslint/triple-slash-reference": "off",
         "no-constant-condition": "off",
