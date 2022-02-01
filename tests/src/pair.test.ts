@@ -26,4 +26,11 @@ describe("pair", () => {
             assert.throws(() => Pair.fromArray(oddArray));
         });
     });
+
+    describe("toString", () => {
+        it("returns the right string", () => {
+            const pair = new Pair(1, 2);
+            assert.equal(pair.toString(), "(1, 2)");
+        });
+    });
 });

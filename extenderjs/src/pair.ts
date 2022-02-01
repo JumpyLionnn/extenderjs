@@ -16,4 +16,8 @@ export class Pair<T1, T2>{
         }
         return result;
     }
+
+    public toString(): string{
+        return `(${this.first}, ${this.second})`;
+    }
 }
