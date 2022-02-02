@@ -24,7 +24,6 @@ declare global {
     
     interface ArrayConstructor{
         zip<T>(...array: T[][]): T[][];
-        sum(array: number[]): number;
     }    
 }
 
@@ -88,7 +87,7 @@ Array.prototype.equals = function<T>(array: T[]): boolean{
 };
 
 Array.prototype.copy = function<T>(): T[]{
-    return this.slice();
+    return this.clone();
 };
 
 // getter
@@ -116,11 +115,6 @@ Array.zip =  function<T>(...arrays: T[][]): T[][]{
         zipped.push(arrays.map((row: T[]) => row[i]));
     }
     return zipped;
-};
-
-
-Array.sum = function (array: number[]): number{
-    return array.reduce((acc: number, element: number) => acc + element, 0);
 };
 
 function defaultCompare<T>(a: T, b: T): number{

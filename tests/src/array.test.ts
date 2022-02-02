@@ -154,11 +154,4 @@ describe("array", ()=> {
             ]);
         });
     });
-
-    describe("sum", ()=> {
-        it("sums all numbers in the array", () => {
-            const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-            assert.equal(Array.sum(array), 55);
-        });
-    });
 });
