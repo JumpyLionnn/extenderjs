@@ -327,6 +327,10 @@ module.exports = {
                     "from": {
                         "before": true,
                         "after": true
+                    },
+                    "throw": {
+                        "before": true,
+                        "after": true
                     }
                 }
             }
